@@ -1,7 +1,5 @@
-# HW2
-homework2 of robot class
-
-
+![9d56ac49bb8959c66eca293fd99ca8f3](https://github.com/user-attachments/assets/cb5968e6-1f3a-4bd0-9485-0d39ec468b4c)# HW2
+## homework2 of robot class
 ---
 
 ## 1. P1_robot_move —— 机器人基础运动控制
@@ -16,11 +14,14 @@ cd P1_robot_move/ros2_ws
 colcon build
 source install/setup.bash
 ros2 run vel_pkg vel_node
+...
 ```
 
 **实现效果：**
-- 机器人可在仿真环境中根据速度指令前进、后退、转弯。
-- 支持自定义速度参数，便于实验不同运动策略。
+### 以速度1m/s运动
+![56d5440221dd153d44d7b2d6bfa2acd2](https://github.com/user-attachments/assets/67eb4d0f-5dfa-4785-be71-0ee8cb31cc4c)
+![54cfc5a6d39ded1a85033cece4fab955](https://github.com/user-attachments/assets/e740d73e-d72e-4a92-9e5f-21c93987916e)
+
 
 ---
 
@@ -37,12 +38,27 @@ cd P2_opencv
 colcon build
 source install/setup.bash
 ros2 run cv_pkg cv_face_detect
-# 或运行其他功能节点
+...
 ```
 
 **实现效果：**
-- 实时检测摄像头画面中的人脸、颜色目标等。
-- 可视化处理结果，支持仿真与真实数据。
+### 实际位置：
+![78f103e30e1e59b618afbd5545743dc1](https://github.com/user-attachments/assets/ef25b375-1ef2-4b06-83ea-9c98f7b84522)
+### 
+### 机器人视角：
+![9d56ac49bb8959c66eca293fd99ca8f3](https://github.com/user-attachments/assets/7675aa89-6e9f-4930-a92c-aaf2f0bd04e0)
+### 让橙色球运动后，机器人视角同时运动
+![712a7556593b799d4db151157dd918ca](https://github.com/user-attachments/assets/97fb7687-e338-4451-ae87-57327486ee50)
+
+### 实时跟踪橙色球的位置：
+![9495d9afca4208ce92e346b500fbdd09](https://github.com/user-attachments/assets/e50098a4-7aac-4d6d-9d6e-6df2aa1b424f)
+
+### 人脸检测跟踪：
+![29c27188433a93e3c01a8f9f026885a5](https://github.com/user-attachments/assets/3a4d3831-2656-4622-92f0-3ca05e098166)
+
+### 点云实现桌子上物体定位：
+![497832d5bc3b27505b675a346b092934](https://github.com/user-attachments/assets/9b27123c-12e4-45c0-9e2b-202129a6180c)
+
 
 ---
 
@@ -59,11 +75,14 @@ cd P3_SLAM/ros2_ws
 colcon build
 source install/setup.bash
 ros2 launch slam_pkg slam.launch.py
+...
 ```
 
 **实现效果：**
-- 机器人在仿真环境中自主运动并实时构建环境地图。
-- 支持多传感器数据融合，提升定位与建图精度。
+### 机器人建图过程：
+![d08c10dba42f716aa39f02cafa8c338d](https://github.com/user-attachments/assets/7e18ce74-db0a-44ff-b5ee-653226d58c44)
+![acfb82d8fee3d69c5f35da71abd3d432](https://github.com/user-attachments/assets/65f6b3ef-3c17-47a3-8509-6fda8217ef44)
+
 
 ---
 
@@ -82,8 +101,15 @@ source install/setup.bash
 ros2 launch nav_pkg nav.launch.py
 # 或
 ros2 launch nav_pkg waypoint_nav.launch.py
+...
 ```
 
 **实现效果：**
-- 机器人可在仿真地图中自主规划路径、避障并到达目标点。
-- 支持多点导航、路径可视化、导航点编辑等高级功能。
+### 根据起点终点规划路径：
+![522dc55aa0c98f6cc8a234122899ea19](https://github.com/user-attachments/assets/e9c7eabf-dd14-4ba1-9dae-fd0a5c310e7c)
+### 开始根据规划的路径自动导航：
+![0bb7379e9dc63cbfc2a72cff3dadfe7b](https://github.com/user-attachments/assets/3c7b7dfd-b0f3-4bf3-8447-9316309203fc)
+### 设置多个点位：
+![035f77a61c3da2a8758199e0707e9a45](https://github.com/user-attachments/assets/5b984cb8-3d84-4e25-b85e-26ecf6919d5a)
+![90e33d8c5b808b71420bc7224310f468](https://github.com/user-attachments/assets/5cdab2ed-f544-43ab-937f-ef582260c7ac)
+
